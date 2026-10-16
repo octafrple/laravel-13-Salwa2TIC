@@ -9,46 +9,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+        }
 
-    .navbar-brand {
-        font-weight: bold;
-    }
+        .navbar-brand {
+            font-weight: bold;
+        }
 
-    .navbar {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .hero-section {
-        background-color: #3187e9;
-        color: white;
-        padding: 50px 0;
-        text-align: center;
-    }
+        .hero-section {
+            background-color: #3187e9;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
 
-    .hero-section h1 {
-        font-size: 3rem;
-    }
+        .hero-section h1 {
+            font-size: 3rem;
+        }
 
-    .card {
-        margin-top: 30px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        .card {
+            margin-top: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    .footer {
-        margin-top: 50px;
-        padding: 20px 0;
-        background-color: #f8f9fa;
-        text-align: center;
-    }
+        .footer {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
 
-    .footer p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #6c757d;
-    }
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
     </style>
 </head>
 
@@ -83,8 +83,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="display-6 mb-2">{{$username}}</h1>
-            <p class="lead mb-0">{{$last_login}}</p>
+            <h1 class="display-6 mb-2">{{ $username }}</h1>
+            <p class="lead mb-0">{{ $last_login }}</p>
         </div>
     </section>
 
@@ -162,6 +162,16 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Form Pertanyaan</h5>
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
                         <form action="{{ route('question.store') }}" method="POST">
                             @csrf
@@ -255,7 +265,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; {{date('Y')}} My Laravel App. All Rights Reserved.</p>
+            <p>&copy; {{ date('Y') }} My Laravel App. All Rights Reserved.</p>
         </div>
     </footer>
 
