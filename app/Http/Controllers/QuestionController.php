@@ -27,7 +27,7 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+        // dd($request->all());
         $request->validate([
             'nama' => 'required|max:10',
             'email' => ['required', 'email'],
