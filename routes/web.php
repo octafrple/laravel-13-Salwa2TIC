@@ -32,7 +32,7 @@ Route::get('/nim/{param1?}', function($param1 = '') {
 Route::get('/about', function() {
     return view('halaman-about');
     });
-    
+
 Route::get('/mahasiswa/{param1}', [MahasiswaController::class, 'show']);
 
 Route::get('/matakuliah', [MatakuliahController::class, 'index']);
@@ -48,5 +48,5 @@ Route::post('question/store', [QuestionController::class, 'store'])
 Route::get('dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
 
-//route pertemuan 8 pelanggan
+//route pelanggan
 Route::resource('pelanggan', PelangganController::class);
