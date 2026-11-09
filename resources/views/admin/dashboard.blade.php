@@ -102,7 +102,7 @@
                     </a>
                 </li>
                 <li class="nav-item  active ">
-                    <a href="{{ route('pelanggan.create') }}" class="nav-link">
+                    <a href="{{ route('admin.pelanggan.create') }}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +343,7 @@
 					New Task
 				</button>
 				<div class="dropdown-menu dashboard-dropdown dropdown-menu-start mt-2 py-1">
-					<a class="dropdown-item d-flex align-items-center" href="{{route('admin.pelanggan.create')}}">
+					<a class="dropdown-item d-flex align-items-center" href="{{route('pelanggan.create')}}">
 						<svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
