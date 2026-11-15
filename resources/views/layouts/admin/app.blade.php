@@ -65,7 +65,6 @@
     </main>
 
     {{-- start JS --}}
-    <!-- Core -->
     @include('layouts.admin.js')
     {{-- End JSS --}}
 </body>

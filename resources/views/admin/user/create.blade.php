@@ -35,7 +35,7 @@
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- Name -->
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">First name</label>
+                                        <label for="name" class="form-label">Name</label>
                                         <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}">
                                         @error('name')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -65,9 +65,9 @@
                                     <!-- Gender -->
 
                                     <div class="mb-3">
-                                        <label for="confirm_password" class="form-label">Confirm Password</label>
-                                        <input type="confirm_password" id="confirm_password" name="confirm_password" class="form-control @error('confirm_password') is-invalid @enderror" value="{{ old('confirm_password') }}">
-                                        @error('confirm_password')
+                                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                                        <input type="password_confirmation" id="password_confirmation" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}">
+                                        @error('password_confirmation')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                         <div>
